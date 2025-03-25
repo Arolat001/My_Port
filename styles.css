@@ -542,6 +542,9 @@ nav ul li a:hover::after {
 }
 
 .project-links {
+  border: 2px solid #eee;
+  border-radius: 500px;
+  width: 50%;
   display: flex;
   gap: 10px;
 }

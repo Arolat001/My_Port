@@ -73,23 +73,58 @@ filterBtns.forEach((btn) => {
       }
     })
   })
-})
+})(
+  // Initialize EmailJS
+  () => {
+    // Replace "your_public_key" with your actual EmailJS public key
+    emailjs.init("your_public_key")
+  },
+)()
 
-// Form Submissions
+// Contact form submission
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault()
+
   // Get form data
-  const formData = new FormData(contactForm)
-  const formObject = Object.fromEntries(formData)
+  const name = document.getElementById("name").value
+  const email = document.getElementById("email").value
+  const subject = document.getElementById("subject").value
+  const message = document.getElementById("message").value
 
-  // Here you would typically send the data to a server
-  console.log("Contact Form Submission:", formObject)
+  // Show loading state
+  const submitBtn = contactForm.querySelector('button[type="submit"]')
+  const originalBtnText = submitBtn.textContent
+  submitBtn.textContent = "Sending..."
+  submitBtn.disabled = true
 
-  // Show success message
-  alert("Thank you for your message! I will get back to you soon.")
+  // Prepare template parameters
+  const templateParams = {
+    from_name: name,
+    from_email: email,
+    subject: subject,
+    message: message,
+  }
 
-  // Reset form
-  contactForm.reset()
+  // Send email using EmailJS
+  // Replace 'your_service_id' and 'your_template_id' with your actual EmailJS credentials
+  emailjs
+    .send("your_service_id", "your_template_id", templateParams)
+    .then(
+      (response) => {
+        console.log("SUCCESS!", response.status, response.text)
+        alert("Thank you! Your message has been sent.")
+        contactForm.reset()
+      },
+      (error) => {
+        console.log("FAILED...", error)
+        alert("Oops! Something went wrong, we couldn't send your message.")
+      },
+    )
+    .finally(() => {
+      // Reset button state
+      submitBtn.textContent = originalBtnText
+      submitBtn.disabled = false
+    })
 })
 
 newsletterForm.addEventListener("submit", (e) => {

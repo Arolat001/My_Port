@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional CV</title>
+    <!-- Include html2pdf.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        /* Black and Grey Color Scheme */
+
+        :root {
+            --black: #000000;
+            --dark-grey: #333333;
+            --medium-grey: #666666;
+            --light-grey: #e0e0e0;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--dark-grey);
+            background-color: var(--white);
+            line-height: 1.5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4 {
+            color: var(--black);
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            border-bottom: 2px solid var(--black);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        h2 {
+            font-size: 18px;
+            margin-top: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--light-grey);
+            padding-bottom: 5px;
+        }
+        
+        h3 {
+            font-size: 16px;
+            color: var(--black);
+        }
+        
+        h4 {
+            font-size: 15px;
+            font-weight: normal;
+            color: var(--medium-grey);
+        }
+        
+        p {
+            margin-bottom: 10px;
+            color: var(--medium-grey);
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+            color: var(--medium-grey);
+        }
+        
+        .header {
+            margin-bottom: 30px;
+        }
+        
+        .contact-info {
+            margin-bottom: 20px;
+            color: var(--medium-grey);
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .job, .education {
+            margin-bottom: 20px;
+        }
+        
+        .job-header, .edu-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            align-items: baseline;
+        }
+        
+        .date {
+            color: var(--medium-grey);
+            font-style: italic;
+            font-size: 14px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .skill-category {
+            margin-bottom: 15px;
+        }
+        
+        .skill-category h3 {
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: var(--black);
+        }
+        
+        .buttons {
+            text-align: center;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .buttons button {
+            background-color:grey;
+            color: var(--white);
+            border: none;
+            padding: 20px 20px;
+            cursor: pointer;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 300px;
+        }
+        
+        .buttons button:hover {
+            background-color: var(--dark-grey);
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            
+            .container {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .buttons {
+                display: none;
+            }
+            
+            h2 {
+                page-break-after: avoid;
+            }
+            
+            .job, .education {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="cv-content">
+        <!-- Header Section -->
+        <div class="header">
+            <h1 style="text-align: center;">Arowolo Abdul-Lateef</h1>
+            <div class="contact-info">
+                <p>Gmail:arowoloabdullateef10@gmail.com</p>
+                <p>Phone:+234 7061981716</p>
+                <p>Git:Arolat001</p>
+            </div>
+        </div>
+
+        <!-- Professional Summary Section -->
+        <div class="section">
+            <h2 style="font-size: 25px;">Professional Summary</h2>
+            <p>Senior Software Engineer with 8+ years of experience in full-stack development, cloud architecture, and team leadership. Specialized in building scalable applications that drive business growth and enhance user experience.</p>
+        </div>
+
+        <!-- Work Experience Section -->
+        <div class="section">
+            <h2 style="font-size: 25px;">Experience</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3 style="font-size: 20px;">Senior Software Engineer</h3>
+                </div>
+                <h4>Tech Innovations Inc., New York, NY</h4>
+                <ul>
+                    <li>Led development team in implementing microservices architecture, improving system performance by 40%</li>
+                    <li>Developed cloud-native applications using AWS services, reducing operational costs by 30%</li>
+                    <li>Implemented CI/CD pipelines using GitHub Actions and Docker, decreasing deployment time by 70%</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3 style="font-size: 20px;">Full Stack Developer</h3>
+                </div>
+                <h4>Digital Solutions LLC, Boston, MA</h4>
+                <ul>
+                    <li>Developed web applications using React, Node.js, and MongoDB, serving 100,000+ monthly users</li>
+                    <li>Redesigned authentication system with OAuth 2.0 and JWT, enhancing security</li>
+                    <li>Optimized database queries and implemented caching, reducing page load times by 60%</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3 style="font-size: 20px;">Junior Web Developer</h3>
+                </div>
+                <h4>Creative Web Agency, Chicago, IL</h4>
+                <ul>
+                    <li>Built responsive websites using HTML5, CSS3, and JavaScript for various industry clients</li>
+                    <li>Developed custom WordPress themes and plugins to meet specific client requirements</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section">
+            <h2 style="font-size: 20px;">Education</h2>
+            
+            <div class="education">
+                <div class="edu-header">
+                    <h3>MS in Computer Science</h3>
+                    <span class="date">2013 - 2015</span>
+                </div>
+                <h4>Massachusetts Institute of Technology</h4>
+            </div>
+            
+            <div class="education">
+                <div class="edu-header">
+                    <h3>BS in Software Engineering</h3>
+                    <span class="date">2009 - 2013</span>
+                </div>
+                <h4>University of California, Berkeley</h4>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section">
+            <h2 style="font-size: 20px;">Technical Skills</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <p>JavaScript, TypeScript, Python, Java, SQL</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <p>React,HTML5/CSS3</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <p>Node.js, Spring Boot,Java,React-Native</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Database & Cloud</h3>
+                    <p>MongoDB,SQL</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Certifications Section -->
+        <div class="section">
+            <h2>Certifications</h2>
+            <ul>
+                <li>AWS Certified Solutions Architect - Professional (2022)</li>
+                <li>Google Cloud Professional Cloud Architect (2021)</li>
+                <li>Microsoft Certified: Azure DevOps Engineer Expert (2020)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="window.print()">Print CV</button>
+        <button onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <script>
+        // Function to download the CV as PDF
+        function downloadPDF() {
+            // Get the CV content element
+            const element = document.getElementById('cv-content');
+            
+            // Options for the PDF
+            const options = {
+                margin: [15, 15, 15, 15],
+                filename: 'john_doe_cv.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            
+            // Generate and download the PDF
+            html2pdf().set(options).from(element).save();
+        }
+    </script>
+</body>
+</html>
+

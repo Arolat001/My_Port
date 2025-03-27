@@ -3,396 +3,575 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CssFolder/css/font-awesome.min.css">
+    <title>P-Market | Online Shopping </title>
     <link rel="stylesheet" href="./e-comm.css">
-    <title>Arolat E-commerce</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <section id="header">
-        <a href="#"><img src="./logo.jpg" class="logo" alt="" width="80px" height="80px"></a>
-
-        <div>
-            <ul id="navbar">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="">Shop</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li id="lg-bag"><a href="cart.html"><i class="fa fas fas fa-shopping-bag"></i></a></li>
-                <a href="#" id="close"><i class="far fa fa-times"></i></a>
-            </ul>
-        </div>
-
-        <div id="mobile">
-            <a href="cart.html"><i class="fa fas fas fa-shopping-bag"></i></a>
-            <i id="bar" class="fas fa fa-outdent"></i>
-        </div>
-    </section>
-
-    <section id="hero">
-        <h4>Trade in Offer</h4>
-        <h2>Super value deals</h2>
-        <h1>On all products</h1>
-        <p>Save more with coupons & up to 70% off</p>
-        <button>Shop now</button>
-    </section>
-
-    <section id="feature" class="section-p1">
-        <div id="fe-box">
-            <img src="./Save money.jpg" alt="" width="200px" height="200px">
-            <h6 >Free Shipping</h6>
-        </div>
-        <div id="fe-box">
-            <img src="./Save money.jpg" alt="" width="200px" height="200px">
-            <h6 >Online order</h6>
-        </div>
-        <div id="fe-box">
-            <img src="./Save money.jpg" alt="" width="200px" height="200px">
-            <h6 >Save money</h6>
-        </div>
-        <div id="fe-box">
-            <img src="./promotion.jpg " alt="" width="200px" height="200px">
-            <h6 >Promotions</h6>
-        </div>
-        <div id="fe-box">
-            <img src="./promotion.jpg" alt="" width="200px" height="200px">
-            <h6 >Happy sell</h6>
-        </div>
-        </div>
-    </section>
-
-    <!-- <section id="product1" class="section-p1" >
-        <h2>Featured products</h2>
-        <p>Summer Collection New Modern design</p>
-
-
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./Image.jpg" alt="" >
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Sunflower best Jacket</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
-                    <h4>$500</h4>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>P-<span>Market</span></h1>
                 </div>
-                <a href="#"><i class="fa fas fa-shopping-bag bag"></i></a>
+                
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            
+                    
+                    <div class="cart-icon" id="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+            <div class="empty-cart">
+                <i class="fas fa-shopping-basket"></i>
+                <p>Your cart is empty</p>
+                <button class="btn btn-primary start-shopping">Start Shopping</button>
+            </div>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price">$0.00</span>
+            </div>
+            <button class="btn btn-primary checkout-btn">Checkout</button>
+        </div>
+    </div>
+    
+    <div class="overlay"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Shop Smart, Shop Easy</h1>
+                    <p>Discover amazing products at unbeatable prices. Your one-stop shop for all your needs.</p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary">Shop Now</a>
+                        <a href="#deals" class="btn btn-outline">View Deals</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="/placeholder.svg?height=500&width=500" alt="Shopping">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Products</h2>
+                <p>Quality products for every need</p>
             </div>
             
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./Image.jpg" alt="" >
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Sunflower best Jacket</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="electronics">
+                    <div class="product-badge">New</div>
+                    <div class="product-img">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Wireless Headphones">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="1"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-cart" data-id="1"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
                     </div>
-                    <h4>$500</h4>
-                </div>
-                <a href="#"><i class="fa fas fa-shopping-bag bag"></i></a>
-            </div>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./Image.jpg" alt="" >
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Sunflower best Jacket</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                    <div class="product-info">
+                        <h3 class="product-title">Wireless Headphones</h3>
+                        <div class="product-price">
+                            <span class="price">$89.99</span>
+                            <span class="old-price">$129.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(45)</span>
+                        </div>
                     </div>
-                    <h4>$500</h4>
                 </div>
-                <a href="#"><i class="fa fas fa-shopping-bag bag"></i></a>
-            </div>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./Save money.jpg" alt="" >
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Sunflower best Jacket</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                
+                <!-- Product 2 -->
+                <div class="product-card" data-category="clothing">
+                    <div class="product-img">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Men's Casual Shirt">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="2"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-cart" data-id="2"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
                     </div>
-                    <h4>$500</h4>
-                </div>
-                <a href="#"><i class="fa fas fa-shopping-bag bag"></i></a>
-            </div>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./Save money.jpg" alt="" >
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Sunflower best Jacket</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                    <div class="product-info">
+                        <h3 class="product-title">Men's Casual Shirt</h3>
+                        <div class="product-price">
+                            <span class="price">$34.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(28)</span>
+                        </div>
                     </div>
-                    <h4>$500</h4>
                 </div>
-                <a href="#"><i class="fa fas fa-shopping-bag bag"></i></a>
-            </div>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./supports.jpg" alt="" >
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Sunflower best Jacket</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                
+                <!-- Product 3 -->
+                <div class="product-card" data-category="home">
+                    <div class="product-badge sale">Sale</div>
+                    <div class="product-img">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Coffee Maker">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="3"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-cart" data-id="3"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
                     </div>
-                    <h4>$500</h4>
-                </div>
-                <a href="#"><i class="fa fas fa-shopping-bag bag"></i></a>
-            </div>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./promotion.jpg" alt="" >
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Sunflower best Jacket</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                    <div class="product-info">
+                        <h3 class="product-title">Coffee Maker</h3>
+                        <div class="product-price">
+                            <span class="price">$49.99</span>
+                            <span class="old-price">$79.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(63)</span>
+                        </div>
                     </div>
-                    <h4>$500</h4>
                 </div>
-                <a href="#"><i class="fa fas fa-shopping-bag bag"></i></a>
-            </div>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./logo.jpg" alt="" >
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Sunflower best Jacket</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                
+                <!-- Product 4 -->
+                <div class="product-card" data-category="beauty">
+                    <div class="product-img">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Skincare Set">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="4"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-cart" data-id="4"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
                     </div>
-                    <h4>$500</h4>
-                </div>
-                <a href="#"><i class="fa fas fa-shopping-bag bag"></i></a>
-            </div>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./promotion.jpg" alt="" >
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Sunflower best Jacket</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                    <div class="product-info">
+                        <h3 class="product-title">Skincare Set</h3>
+                        <div class="product-price">
+                            <span class="price">$59.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(37)</span>
+                        </div>
                     </div>
-                    <h4>$500</h4>
                 </div>
-                <a href="#"><i class="fa fas fa-shopping-bag bag"></i></a>
-            </div>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./promotion.jpg" alt="" >
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Sunflower best Jacket</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                
+                <!-- Product 5 -->
+                <div class="product-card" data-category="electronics">
+                    <div class="product-img">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Smart Watch">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="5"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-cart" data-id="5"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
                     </div>
-                    <h4>$500</h4>
-                </div>
-                <a href="#"><i class="fa fas fa-shopping-bag bag"></i></a>
-            </div>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./promotion.jpg" alt="" >
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Sunflower best Jacket</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                    <div class="product-info">
+                        <h3 class="product-title">Smart Watch</h3>
+                        <div class="product-price">
+                            <span class="price">$129.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(52)</span>
+                        </div>
                     </div>
-                    <h4>$500</h4>
                 </div>
-                <a href="#"><i class="fa fas fa-shopping-bag bag"></i></a>
-            </div>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./promotion.jpg" alt="" >
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Sunflower best Jacket</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                
+                <!-- Product 6 -->
+                <div class="product-card" data-category="clothing">
+                    <div class="product-badge sale">Sale</div>
+                    <div class="product-img">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Women's Dress">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="6"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-cart" data-id="6"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
                     </div>
-                    <h4>$500</h4>
-                </div>
-                <a href="#"><i class="fa fas fa-shopping-bag bag"></i></a>
-            </div>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./promotion.jpg" alt="" >
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Sunflower best Jacket</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                    <div class="product-info">
+                        <h3 class="product-title">Women's Dress</h3>
+                        <div class="product-price">
+                            <span class="price">$45.99</span>
+                            <span class="old-price">$69.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(41)</span>
+                        </div>
                     </div>
-                    <h4>$500</h4>
                 </div>
-                <a href="#"><i class="fa fas fa-shopping-bag bag"></i></a>
-            </div>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./promotion.jpg" alt="" >
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Sunflower best Jacket</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                
+                <!-- Product 7 -->
+                <div class="product-card" data-category="home">
+                    <div class="product-img">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Blender">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="7"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-cart" data-id="7"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
                     </div>
-                    <h4>$500</h4>
+                    <div class="product-info">
+                        <h3 class="product-title">Blender</h3>
+                        <div class="product-price">
+                            <span class="price">$39.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(33)</span>
+                        </div>
+                    </div>
                 </div>
-                <a href="#"><i class="fa fas fa-shopping-bag bag"></i></a>
+                
+                <!-- Product 8 -->
+                <div class="product-card" data-category="beauty">
+                    <div class="product-badge">New</div>
+                    <div class="product-img">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Makeup Kit">
+                        <div class="product-actions">
+                            <button class="quick-view" data-id="8"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-cart" data-id="8"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Makeup Kit</h3>
+                        <div class="product-price">
+                            <span class="price">$79.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(48)</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section> -->
-
-    <section id="banner" class="section-m1">
-        <h4>Repair Service</h4>
-        <h2>Up to <span>70% off</span> All t-shirts and accesories</h2>
-        <button class="normal">Explore More</button>
-    </section>
-
-    <section id="sm-banner" class="section-p1">
-        <div class="banner">
-            <h4>carzy deals</h4>
-            <h2>buy 1 get 1 free!</h2>
-            <span>The best classic dresses</span>
-            <button class="white">Learn More</button>
-        </div>
-        <div class="banner banner2">
-            <h4>carzy deals</h4>
-            <h2>buy 1 get 1 free!</h2>
-            <span>The best classic dresses</span>
-            <button class="white">Learn More</button>
+                
         </div>
     </section>
 
-    <section id="banner3">
-        <div class="banner banner2">
-            <h2>SEASONAL SALE</h2>
-            <h4>Winter 50% off </h4>
-        </div>
-        <div class="banner banner3">
-            <h2>SEASONAL SALE</h2>
-            <h4>Winter 50% off </h4>
-        </div>
-        <div class="banner banner4  ">
-            <h2>SEASONAL SALE</h2>
-            <h4>Winter 50% off </h4>
-        </div>
-    </section>
-
-    <section id="newsletter" class="section-p1 section-m1">
-        <div class="newstext">
-            <h4>Sign Up for Our Newsletter</h4>
-            <p>Get e-mail updates about our new product <span>special offers</span></p>
-        </div>
-        <div class="form">
-            <input type="text" name="" id="" placeholder="Input your email">
-            <button class="normal">Sign Up</button>
-        </div>
-    </section>
-
-    <footer class="section-p1">
-        <div class="col">
-            <img class="logo1" src="./logo.jpg" alt="" width="40px" height="40px">
-            <h4>Contact</h4>
-            <p><strong>Address:</strong> 40 Awolowo Road Ikorodu Lagos State</p>
-            <p><strong>Phone:</strong>07044633487</p>
-
-            <div class="follow">
-                <h4>Follow Us</h4>
-                <div class="icons">
-                    <i class="fab fa fa-facebook"></i>
-                    <i class="fab fa fa-twitter"></i>
-                    <i class="fab fa fa-instagram"></i>
-                    <i class="fab fa fab fa-pinterest-p"></i>
-                    <i class="fab fa fa-youtube"></i>
+    <!-- Deals Section -->
+    <section id="deals" class="deals">
+        <div class="container">
+            <div class="section-header">
+                <h2>Special Deals</h2>
+                <p>Limited time offers you don't want to miss</p>
+            </div>
+            
+            <div class="deals-grid">
+                <div class="deal-card">
+                    <div class="deal-content">
+                        <h3>Summer Sale</h3>
+                        <p>Up to 50% off on selected items</p>
+                        <div class="countdown" data-time="2023-12-31">
+                            <div class="countdown-item">
+                                <span class="days">00</span>
+                                <span>Days</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="hours">00</span>
+                                <span>Hours</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="minutes">00</span>
+                                <span>Mins</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="seconds">00</span>
+                                <span>Secs</span>
+                            </div>
+                        </div>
+                        <a href="#products" class="btn btn-primary">Shop Now</a>
+                    </div>
+                    <div class="deal-img">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Summer Sale">
+                    </div>
+                </div>
+                
+                <div class="deal-card">
+                    <div class="deal-content">
+                        <h3>New Arrivals</h3>
+                        <p>Get 15% off on your first purchase</p>
+                        <a href="#products" class="btn btn-primary">Shop Now</a>
+                    </div>
+                    <div class="deal-img">
+                        <img src="/placeholder.svg?height=300&width=300" alt="New Arrivals">
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="col">
-            <h4>About</h4>
-            <a href="#">Delivery Information</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Condition</a>
-            <a href="#">Contact Us</a>
-        </div>
-
-        <div class="col">
-            <h4>My Account</h4>
-            <a href="#">Sign in</a>
-            <a href="#">View Cart</a>
-            <a href="#">Track My order</a>
-            <a href="#">Help</a>
-        </div>
-
-        <div class="col install">
-            <h4>Install App</h4>
-            <p>From App Store or Google Play</p>
-            <div class="row">
-                <i class="fab fa fab fa-apple"></i>
-                <i class="fab fa fab fab fa-google"></i>
-                <p>Secured payed Gateway</p>
-                <i class="fab fa fab fa-cc-visa"></i>
-                <i class="fab fa fab fa-cc-mastercard"></i>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Free Shipping</h3>
+                    <p>On orders over $50</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Easy Returns</h3>
+                    <p>30-day return policy</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Secure Payment</h3>
+                    <p>100% secure checkout</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated support team</p>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <!-- <div class="copyright">
-                <p>&copy 2024 Arolat Codes</p>
-            </div> -->
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="/placeholder.svg?height=500&width=500" alt="About P-Market">
+                </div>
+                <div class="about-text">
+                    <h2>About P-Market</h2>
+                    <p>P-Market is your one-stop online shop for all your needs. We started in 2023 with a simple mission: to make online shopping easy, affordable, and enjoyable for everyone.</p>
+                    <p>We carefully select our products to ensure the highest quality and best value for our customers. With thousands of products across multiple categories, we're confident you'll find exactly what you're looking for.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span>10K+</span>
+                            <p>Products</p>
+                        </div>
+                        <div class="stat">
+                            <span>50K+</span>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat">
+                            <span>100+</span>
+                            <p>Brands</p>
+                        </div>
+                    </div>
+                    <a href="#products" class="btn btn-primary">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get updates on new products, special offers, and more.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>40,Awolowo Road Ikorodu Lagos State</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+234 7085412040</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>p-market@pmarket.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Hours</h3>
+                            <p>Monday - Friday: 9AM - 5PM</p>
+                            <p>Saturday - Sunday: Closed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>P-<span>Market</span></h2>
+                    <p>Your one-stop online shop</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#deals">Deals</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+             
+                
+         
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive updates on new products and special promotions.</p>
+                    <form id="footerNewsletterForm">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-sm">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Made by Arolat Techs. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+         </div>
+            </div>
+        </div>
+    </div>
 
     <script src="./e-comm.js"></script>
 </body>

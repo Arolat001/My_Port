@@ -1,295 +1,194 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Set current year in footer
-    document.getElementById("current-year").textContent = new Date().getFullYear()
+document.addEventListener('DOMContentLoaded', function() {
+  // Mobile Navigation Toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  const navLinks = document.querySelectorAll('.nav-menu a');
   
-    // Mobile menu functionality
-    const mobileMenuToggle = document.querySelector(".mobile-menu-toggle")
-    const mobileMenuClose = document.getElementById("mobile-menu-close")
-    const mobileMenu = document.getElementById("mobile-menu")
-    const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link")
+  hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+  });
   
-    function openMobileMenu() {
-      mobileMenu.classList.add("active")
-      document.body.style.overflow = "hidden"
-    }
+  navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+      });
+  });
   
-    function closeMobileMenu() {
-      mobileMenu.classList.remove("active")
-      document.body.style.overflow = ""
-    }
+  // Header Scroll Effect
+  const header = document.getElementById('header');
   
-    if (mobileMenuToggle) {
-      mobileMenuToggle.addEventListener("click", openMobileMenu)
-    }
-  
-    if (mobileMenuClose) {
-      mobileMenuClose.addEventListener("click", closeMobileMenu)
-    }
-  
-    // Close mobile menu when clicking outside
-    mobileMenu.addEventListener("click", (event) => {
-      if (event.target === mobileMenu) {
-        closeMobileMenu()
+  window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+          header.classList.add('scrolled');
+      } else {
+          header.classList.remove('scrolled');
       }
-    })
+  });
   
-    // Close mobile menu when clicking on a link
-    mobileMenuLinks.forEach((link) => {
-      link.addEventListener("click", closeMobileMenu)
-    })
+  // Active Navigation Link on Scroll
+  const sections = document.querySelectorAll('section[id]');
   
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        if (this.getAttribute("href") !== "#") {
-          e.preventDefault()
-  
-          const targetId = this.getAttribute("href")
-          const targetElement = document.querySelector(targetId)
-  
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 80, // Offset for header
-              behavior: "smooth",
-            })
+  function highlightNavLink() {
+      const scrollY = window.pageYOffset;
+      
+      sections.forEach(section => {
+          const sectionHeight = section.offsetHeight;
+          const sectionTop = section.offsetTop - 100;
+          const sectionId = section.getAttribute('id');
+          
+          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+              document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active');
+          } else {
+              document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active');
           }
-        }
-      })
-    })
+      });
+  }
   
-    // Form submission
-    const contactForm = document.querySelector(".contact-form")
+  window.addEventListener('scroll', highlightNavLink);
   
-    if (contactForm) {
-      contactForm.addEventListener("submit", (e) => {
-        e.preventDefault()
+  // Testimonial Slider
+  const testimonials = document.querySelectorAll('.testimonial');
+  const dots = document.querySelectorAll('.dot');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  let currentIndex = 0;
   
-        // Get form values
-        const firstName = document.getElementById("first-name").value
-        const lastName = document.getElementById("last-name").value
-        const email = document.getElementById("email").value
-        const phone = document.getElementById("phone").value
-        const message = document.getElementById("message").value
+  function showTestimonial(index) {
+      testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      
+      testimonials[index].classList.add('active');
+      dots[index].classList.add('active');
+      currentIndex = index;
+  }
   
-        // Simple validation
-        if (!firstName || !lastName || !email || !message) {
-          alert("Please fill out all required fields.")
-          return
-        }
+  dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+          const index = parseInt(dot.dataset.index);
+          showTestimonial(index);
+      });
+  });
   
-        // Here you would typically send the form data to a server
-        console.log("Form submitted:", { firstName, lastName, email, phone, message })
+  prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex === 0) ? testimonials.length - 1 : currentIndex - 1;
+      showTestimonial(currentIndex);
+  });
   
-        // Reset form
-        contactForm.reset()
+  nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1;
+      showTestimonial(currentIndex);
+  });
   
-        // Show success message
-        alert("Thank you for your message! We will get back to you soon.")
-      })
-    }
-  })
+  // Auto slide testimonials
+  setInterval(() => {
+      currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1;
+      showTestimonial(currentIndex);
+  }, 5000);
   
-  document.addEventListener("DOMContentLoaded", () => {
-    // Set current year in footer
-    document.getElementById("current-year").textContent = new Date().getFullYear()
+  // Back to Top Button
+  const backToTopBtn = document.querySelector('.back-to-top');
   
-    // Mobile menu functionality
-    const mobileMenuToggle = document.querySelector(".mobile-menu-toggle")
-    const mobileMenuClose = document.getElementById("mobile-menu-close")
-    const mobileMenu = document.getElementById("mobile-menu")
-    const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link")
-  
-    function openMobileMenu() {
-      mobileMenu.classList.add("active")
-      document.body.style.overflow = "hidden"
-    }
-  
-    function closeMobileMenu() {
-      mobileMenu.classList.remove("active")
-      document.body.style.overflow = ""
-    }
-  
-    if (mobileMenuToggle) {
-      mobileMenuToggle.addEventListener("click", openMobileMenu)
-    }
-  
-    if (mobileMenuClose) {
-      mobileMenuClose.addEventListener("click", closeMobileMenu)
-    }
-  
-    // Close mobile menu when clicking outside
-    mobileMenu.addEventListener("click", (event) => {
-      if (event.target === mobileMenu) {
-        closeMobileMenu()
+  window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+          backToTopBtn.classList.add('active');
+      } else {
+          backToTopBtn.classList.remove('active');
       }
-    })
+  });
   
-    // Close mobile menu when clicking on a link
-    mobileMenuLinks.forEach((link) => {
-      link.addEventListener("click", closeMobileMenu)
-    })
+  backToTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  });
   
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        if (this.getAttribute("href") !== "#") {
-          e.preventDefault()
-  
-          const targetId = this.getAttribute("href")
-          const targetElement = document.querySelector(targetId)
-  
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 80, // Offset for header
-              behavior: "smooth",
-            })
+  // Smooth Scrolling for Navigation Links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          if (this.getAttribute('href') !== '#') {
+              const target = document.querySelector(this.getAttribute('href'));
+              
+              if (target) {
+                  window.scrollTo({
+                      top: target.offsetTop - 80,
+                      behavior: 'smooth'
+                  });
+              }
           }
-        }
-      })
-    })
+      });
+  });
   
-    // Form submission
-    const contactForm = document.querySelector(".contact-form")
+  // Form Submission
+  const contactForm = document.getElementById('contactForm');
+  const newsletterForm = document.getElementById('newsletterForm');
   
-    if (contactForm) {
-      contactForm.addEventListener("submit", (e) => {
-        e.preventDefault()
+  if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          
+          // Simulate form submission
+          const formData = new FormData(contactForm);
+          const formValues = Object.fromEntries(formData.entries());
+          
+          // You would normally send this data to a server
+          console.log('Contact Form Submitted:', formValues);
+          
+          // Show success message (in a real app)
+          alert('Thank you for your message! We will get back to you soon.');
+          
+          // Reset form
+          contactForm.reset();
+      });
+  }
   
-        // Get form values
-        const firstName = document.getElementById("first-name").value
-        const lastName = document.getElementById("last-name").value
-        const email = document.getElementById("email").value
-        const phone = document.getElementById("phone").value
-        const message = document.getElementById("message").value
+  if (newsletterForm) {
+      newsletterForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          
+          // Simulate form submission
+          const email = newsletterForm.querySelector('input[type="email"]').value;
+          
+          // You would normally send this data to a server
+          console.log('Newsletter Subscription:', email);
+          
+          // Show success message (in a real app)
+          alert('Thank you for subscribing to our newsletter!');
+          
+          // Reset form
+          newsletterForm.reset();
+      });
+  }
   
-        // Simple validation
-        if (!firstName || !lastName || !email || !message) {
-          alert("Please fill out all required fields.")
-          return
-        }
-  
-        // Here you would typically send the form data to a server
-        console.log("Form submitted:", { firstName, lastName, email, phone, message })
-  
-        // Reset form
-        contactForm.reset()
-  
-        // Show success message
-        alert("Thank you for your message! We will get back to you soon.")
-      })
-    }
-  })
-  
-  document.addEventListener("DOMContentLoaded", () => {
-    // Set current year in footer
-    document.getElementById("current-year").textContent = new Date().getFullYear()
-  
-    // Mobile menu functionality
-    const mobileMenuToggle = document.querySelector(".mobile-menu-toggle")
-    const mobileMenuClose = document.getElementById("mobile-menu-close")
-    const mobileMenu = document.getElementById("mobile-menu")
-    const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link")
-  
-    function openMobileMenu() {
-      mobileMenu.classList.add("active")
-      document.body.style.overflow = "hidden"
-    }
-  
-    function closeMobileMenu() {
-      mobileMenu.classList.remove("active")
-      document.body.style.overflow = ""
-    }
-  
-    if (mobileMenuToggle) {
-      mobileMenuToggle.addEventListener("click", openMobileMenu)
-    }
-  
-    if (mobileMenuClose) {
-      mobileMenuClose.addEventListener("click", closeMobileMenu)
-    }
-  
-    // Close mobile menu when clicking outside
-    mobileMenu.addEventListener("click", (event) => {
-      if (event.target === mobileMenu) {
-        closeMobileMenu()
-      }
-    })
-  
-    // Close mobile menu when clicking on a link
-    mobileMenuLinks.forEach((link) => {
-      link.addEventListener("click", closeMobileMenu)
-    })
-  
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        if (this.getAttribute("href") !== "#") {
-          e.preventDefault()
-  
-          const targetId = this.getAttribute("href")
-          const targetElement = document.querySelector(targetId)
-  
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 80, // Offset for header
-              behavior: "smooth",
-            })
+  // Animation on Scroll (simple implementation)
+  function animateOnScroll() {
+      const elements = document.querySelectorAll('.feature-box, .program-card, .trainer-card, .pricing-card');
+      
+      elements.forEach(element => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const screenPosition = window.innerHeight / 1.3;
+          
+          if (elementPosition < screenPosition) {
+              element.style.opacity = '1';
+              element.style.transform = 'translateY(0)';
           }
-        }
-      })
-    })
+      });
+  }
   
-    // Form submission
-    const contactForm = document.querySelector(".contact-form")
+  // Set initial state for animation
+  document.querySelectorAll('.feature-box, .program-card, .trainer-card, .pricing-card').forEach(element => {
+      element.style.opacity = '0';
+      element.style.transform = 'translateY(20px)';
+      element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  });
   
-    if (contactForm) {
-      contactForm.addEventListener("submit", (e) => {
-        e.preventDefault()
+  window.addEventListener('scroll', animateOnScroll);
   
-        // Get form values
-        const firstName = document.getElementById("first-name").value
-        const lastName = document.getElementById("last-name").value
-        const email = document.getElementById("email").value
-        const phone = document.getElementById("phone").value
-        const message = document.getElementById("message").value
-  
-        // Simple validation
-        if (!firstName || !lastName || !email || !message) {
-          alert("Please fill out all required fields.")
-          return
-        }
-  
-        // Here you would typically send the form data to a server
-        console.log("Form submitted:", { firstName, lastName, email, phone, message })
-  
-        // Reset form
-        contactForm.reset()
-  
-        // Show success message
-        alert("Thank you for your message! We will get back to you soon.")
-      })
-    }
-  })
-
-  
-  
-        // Theme function
-
-
-        const toggle = document.getElementById('theme-toggle');
-        const currentTheme = localStorage.getItem('theme') || 'light';
-    
-        if (currentTheme === 'dark') {
-            document.body.classList.add('dark-theme');
-            toggle.checked = true;
-        }
-    
-        toggle.addEventListener('change', () => {
-            if (toggle.checked) {
-                document.body.classList.add('dark-theme');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.body.classList.remove('dark-theme');
-                localStorage.setItem('theme', 'light');
-            }
-        });
+  // Call once on load
+  animateOnScroll();
+});

@@ -1,656 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitPeak - Transform Your Body, Transform Your Life</title>
-  <meta name="description"
-    content="Join our fitness community and achieve your health goals with expert trainers and personalized programs.">
-
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-
-  <link rel="stylesheet" href="./gym.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-Strength | Build Your Strength</title>
+    <link rel="stylesheet" href="./gym.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-  <div class="site-wrapper">
-    <header class="site-header">
-      <div class="container header-container">
-        <div class="logo-container">
-          <!-- <div class="LogoImg" style="font-family: Quicksand,serif;"> -->
-          <img src="./logo.jpg" alt="Logo" width="50px" height="50px"><span>BIEN-ÊTRE
-            DES SENIORS</span>
-          <!-- </div> -->
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <h1>B-<span>STRENGTH</span></h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#trainers">Trainers</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
         </div>
-        <nav class="main-nav">
-          <a href="#" class="nav-link">Accueil</a>
-          <a href="#programs" class="nav-link">Programs</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#gallery" class="nav-link">Gallery</a>
-          <a href="#contact" class="nav-link">Contact</a>
-          <!-- <a href="#contact" class="nav-link">Contact</a>
-          <a href="#contact" class="nav-link">Contact</a> -->
-        </nav>
-        <div class="header-actions">
-          <input class="l" type="checkbox" id="theme-toggle" />
-          <button class="icon-button mobile-menu-toggle mobile-only" aria-label="Toggle menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="4" x2="20" y1="12" y2="12"></line>
-              <line x1="4" x2="20" y1="6" y2="6"></line>
-              <line x1="4" x2="20" y1="18" y2="18"></line>
-            </svg>
-          </button>
-        </div>
-      </div>
     </header>
 
-    <main>
-      <section class="hero-section">
-        <div class="hero-background">
-          <img src="./A D 1.webp" alt="Fitness background" class="hero-image">
-        </div>
-        <div class="container hero-content">
-          <div class="text-center text-white">
-            <h1 class="hero-title">Transform Your Body, Transform Your Life</h1>
-            <p class="hero-subtitle">Join our fitness community and achieve your health goals with expert trainers and
-              personalized programs.</p>
-            <div class="hero-buttons">
-              <a href="#gallery" class="button primary-button button-lg">View Our Story</a>
-              <!-- <a href="#contact" class="button outline-button button-lg">Free Consultation</a> -->
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>BUILD YOUR BODY</h1>
+            <h2>TRANSFORM YOUR LIFE</h2>
+            <p>Join B-Strength today and start your fitness journey with our expert trainers and state-of-the-art facilities.</p>
+            <div class="hero-btns">
+                <a href="#pricing" class="btn btn-primary">Join Now</a>
+                <a href="#programs" class="btn btn-secondary">Our Programs</a>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <section class="features-section">
-        <div class="container">
-          <div class="section-header text-center">
-            <h2 class="section-title">Why Us</h2>
-            <p class="section-subtitle">We offer a comprehensive approach to fitness with expert trainers and
-              personalized programs.</p>
-          </div>
-          <div class="features-grid">
-            <div class="feature-card">
-              <div class="feature-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-                  <path d="M6.5 6.5h11"></path>
-                  <path d="M6.5 17.5h11"></path>
-                  <path d="M3 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
-                  <path d="M3 19a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
-                  <path d="M21 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
-                  <path d="M21 19a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
-                </svg>
-              </div>
-              <h3 class="feature-title">Expert Training</h3>
-              <p class="feature-description">Our certified trainers create personalized workout plans tailored to your
-                goals.</p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-              </div>
-              <h3 class="feature-title">Community Support</h3>
-              <p class="feature-description">Join a supportive community that will keep you motivated on your fitness
-                journey.</p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="16" y1="2" x2="16" y2="6"></line>
-                  <line x1="8" y1="2" x2="8" y2="6"></line>
-                  <line x1="3" y1="10" x2="21" y2="10"></line>
-                </svg>
-              </div>
-              <h3 class="feature-title">Flexible Scheduling</h3>
-              <p class="feature-description">Choose from various class times that fit your busy schedule, with both
-                in-person and virtual options.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section id="programs" class="programs-section">
-        <div class="container">
-          <div class="section-header text-center">
-            <h2 class="section-title">Our Fitness Programs</h2>
-            <p class="section-subtitle">Discover the perfect program to help you reach your fitness goals.</p>
-          </div>
-          <div class="programs-grid">
-            <div class="program-card">
-              <div class="program-image">
-                <img src="./d31e9499-fa49-4467-9329-809561cc5ce7.jpg" alt="Strength Training">
-              </div>
-              <div class="program-content">
-                <h3 class="program-title">Strength Training</h3>
-                <p class="program-description">Build muscle and increase strength with our comprehensive strength
-                  training program.</p>
-                <a href="#contact" class="text-button">
-                  Learn More
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon-right">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div class="program-card">
-              <div class="program-image">
-                <img src="./d31e9499-fa49-4467-9329-809561cc5ce7.jpg" alt="Cardio Fitness">
-              </div>
-              <div class="program-content">
-                <h3 class="program-title">Cardio Fitness</h3>
-                <p class="program-description">Improve your cardiovascular health and endurance with our high-energy
-                  cardio workouts.</p>
-                <a href="#contact" class="text-button">
-                  Learn More
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon-right">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div class="program-card">
-              <div class="program-image">
-                <img src="./d31e9499-fa49-4467-9329-809561cc5ce7.jpg" alt="Yoga & Flexibility">
-              </div>
-              <div class="program-content">
-                <h3 class="program-title">Yoga & Flexibility</h3>
-                <p class="program-description">Enhance your flexibility, balance, and mental well-being with our yoga
-                  classes.</p>
-                <a href="#contact" class="text-button">
-                  Learn More
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon-right">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div class="program-card">
-              <div class="program-image">
-                <img src="./d31e9499-fa49-4467-9329-809561cc5ce7.jpg" alt="HIIT Workouts">
-              </div>
-              <div class="program-content">
-                <h3 class="program-title">HIIT Workouts</h3>
-                <p class="program-description">Maximize calorie burn and boost metabolism with high-intensity interval
-                  training.</p>
-                <a href="#contact" class="text-button">
-                  Learn More
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon-right">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div class="program-card">
-              <div class="program-image">
-                <img src="./d31e9499-fa49-4467-9329-809561cc5ce7.jpg" alt="Nutrition Coaching">
-              </div>
-              <div class="program-content">
-                <h3 class="program-title">Nutrition Coaching</h3>
-                <p class="program-description">Get personalized nutrition plans to complement your fitness routine and
-                  maximize results.</p>
-                <a href="#contact" class="text-button">
-                  Learn More
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon-right">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div class="program-card">
-              <div class="program-image">
-                <img src="./d31e9499-fa49-4467-9329-809561cc5ce7.jpg" alt="Personal Training">
-              </div>
-              <div class="program-content">
-                <h3 class="program-title">Personal Training</h3>
-                <p class="program-description">Work one-on-one with our expert trainers for a fully customized fitness
-                  experience.</p>
-                <a href="#contact" class="text-button">
-                  Learn More
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon-right">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section id="about" class="about-section">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-          <div class="about-grid">
-            <div class="about-image">
-              <img src="https://e77ddf7f4e.cbaul-cdnwnd.com/d6c991ed09fd6239ca699d7b1e521c2a/200000163-e84d8e84dd/M%202.webp?ph=e77ddf7f4e" alt="About our fitness center">
+            <div class="section-header">
+                <h2>About Us</h2>
+                <p>Learn more about B-Strength and our mission</p>
             </div>
             <div class="about-content">
-              <div class="about-header">
-                <h2 class="section-title">About Our Fitness Center</h2>
-                <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae dignissimos 
-                  molestiae minus reiciendis non. Earum, facilis nihil!
-                </p>
-              </div>
-              <div class="about-details">
-                <h3 class="about-subtitle">Our Mission</h3>
-                <p class="about-text">We believe fitness should be accessible to everyone. Our mission is to create a
-                  welcoming environment where people of all fitness levels can achieve their health and wellness goals.
-                </p>
-
-                <h3 class="about-subtitle">Our Approach</h3>
-                <p class="about-text">We combine cutting-edge equipment, expert instruction, and a supportive community
-                  to help you achieve sustainable results. Our holistic approach addresses not just physical fitness,
-                  but overall wellbeing.</p>
-
-                <h3 class="about-subtitle">Our Team</h3>
-                <p class="about-text">Our certified trainers bring years of experience and specialized knowledge to help
-                  you reach your fitness goals safely and effectively. Each team member is committed to your success.
-                </p>
-              </div>
-              <!-- <a href="#contact" class="button primary-button">Get to Know Us</a> -->
+                <div class="about-img">
+                    <img src="/placeholder.svg?height=500&width=600" alt="Gym interior">
+                </div>
+                <div class="about-text">
+                    <h3>Welcome to B-Strength</h3>
+                    <p>Founded in 2010, B-Strength has been helping people transform their lives through fitness for over a decade. Our mission is to provide a welcoming environment where everyone, regardless of fitness level, can work towards their goals.</p>
+                    <p>We believe that strength isn't just physical – it's mental too. Our approach combines effective training methods with supportive coaching to help you build strength in all areas of your life.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span>10+</span>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <span>15</span>
+                            <p>Expert Trainers</p>
+                        </div>
+                        <div class="stat">
+                            <span>5000+</span>
+                            <p>Happy Members</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <section id="gallery" class="gallery-section">
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
         <div class="container">
-          <div class="section-header text-center">
-            <h2 class="section-title">Our Gallery</h2>
-            <p class="section-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, nihil..</p>
-          </div>
-          <div class="gallery-grid">
-            <div class="gallery-item">
-              <div class="gallery-image">
-                <img src="https://e77ddf7f4e.cbaul-cdnwnd.com/d6c991ed09fd6239ca699d7b1e521c2a/200000152-b212bb212f/IMG-20201016-WA0030.webp?ph=e77ddf7f4e" alt="Weight Room">
-              </div>
-              <div class="gallery-overlay">
-                <div class="gallery-text">
-                  <h3 class="gallery-title">Outdoor</h3>
-                  <p class="gallery-description">Out door picture with elderlies</p>
-                </div>
-              </div>
+            <div class="section-header">
+                <h2>Our Programs</h2>
+                <p>Find the perfect fitness program for your goals</p>
             </div>
-            <div class="gallery-item">
-              <div class="gallery-image">
-                <img src="https://e77ddf7f4e.cbaul-cdnwnd.com/d6c991ed09fd6239ca699d7b1e521c2a/200000155-4899b4899d/A%20D%203.jpg%20HANDI.webp?ph=e77ddf7f4e" alt="Cardio Area">
-              </div>
-              <div class="gallery-overlay">
-                <div class="gallery-text">
-                  <h3 class="gallery-title">Lorem, ipsum dolor.</h3>
-                  <p class="gallery-description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Strength Training">
+                    </div>
+                    <div class="program-content">
+                        <h3>Strength Training</h3>
+                        <p>Build muscle, increase strength, and improve your overall fitness with our comprehensive strength training program.</p>
+                        <a href="#contact" class="btn btn-sm">Learn More</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <div class="gallery-image">
-                <img src="https://e77ddf7f4e.cbaul-cdnwnd.com/d6c991ed09fd6239ca699d7b1e521c2a/200000157-e7d21e7d2d/B%20E%203.webp?ph=e77ddf7f4e" alt="Yoga Studio">
-              </div>
-              <div class="gallery-overlay">
-                <div class="gallery-text">
-                  <h3 class="gallery-title">Lorem, ipsum dolor.</h3>
-                  <p class="gallery-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Cardio Fitness">
+                    </div>
+                    <div class="program-content">
+                        <h3>Cardio Fitness</h3>
+                        <p>Improve your cardiovascular health, burn calories, and boost your endurance with our cardio fitness program.</p>
+                        <a href="#contact" class="btn btn-sm">Learn More</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <div class="gallery-image">
-                <img src="https://e77ddf7f4e.cbaul-cdnwnd.com/d6c991ed09fd6239ca699d7b1e521c2a/200000158-271682716b/M.webp?ph=e77ddf7f4e" alt="Group Fitness">
-              </div>
-              <div class="gallery-overlay">
-                <div class="gallery-text">
-                  <h3 class="gallery-title">Lorem, ipsum dolor.</h3>
-                  <p class="gallery-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="/placeholder.svg?height=300&width=400" alt="HIIT Classes">
+                    </div>
+                    <div class="program-content">
+                        <h3>HIIT Classes</h3>
+                        <p>High-Intensity Interval Training classes designed to maximize calorie burn and improve fitness in short, effective workouts.</p>
+                        <a href="#contact" class="btn btn-sm">Learn More</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <div class="gallery-image">
-                <img src="https://e77ddf7f4e.cbaul-cdnwnd.com/d6c991ed09fd6239ca699d7b1e521c2a/200000160-e7947e794b/sport%20ext%206.webp?ph=e77ddf7f4e" alt="Recovery Zone">
-              </div>
-              <div class="gallery-overlay">
-                <div class="gallery-text">
-                  <h3 class="gallery-title">Lorem, ipsum dolor.</h3>
-                  <p class="gallery-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Yoga & Flexibility">
+                    </div>
+                    <div class="program-content">
+                        <h3>Yoga & Flexibility</h3>
+                        <p>Enhance your flexibility, balance, and mental wellbeing with our yoga and flexibility training programs.</p>
+                        <a href="#contact" class="btn btn-sm">Learn More</a>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="gallery-item">
-              <div class="gallery-image">
-                <img src="https://e77ddf7f4e.cbaul-cdnwnd.com/d6c991ed09fd6239ca699d7b1e521c2a/200000161-e9b1fe9b22/sport%20ext%209.webp?ph=e77ddf7f4e" alt="Locker Rooms">
-              </div>
-              <div class="gallery-overlay">
-                <div class="gallery-text">
-                  <h3 class="gallery-title">Lorem ipsum dolor sit.</h3>
-                  <p class="gallery-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="text-center mt-8">
-            <a href="#contact" class="button outline-button button-lg">View More</a>
-          </div>
         </div>
+    </section>
 
+    <!-- Trainers Section -->
+    <section id="trainers" class="trainers">
         <div class="container">
-          <div class="section-header text-center">
-            <!-- <h2 class="section-title">Our Facility</h2>
-            <p class="section-subtitle">Take a look at our state-of-the-art equipment and spacious workout areas.</p> -->
-          </div>
-          <div class="gallery-grid">
-            <div class="gallery-item">
-              <div class="gallery-image">
-                <img src="https://placehold.co/600x400" alt="Weight Room">
-              </div>
-              <div class="gallery-overlay">
-                <div class="gallery-text">
-                  <!-- <h3 class="gallery-title">Weight Room</h3>
-                  <p class="gallery-description">Comprehensive free weights and machines for strength training</p> -->
-                </div>
-              </div>
+            <div class="section-header">
+                <h2>Our Trainers</h2>
+                <p>Meet our team of expert fitness professionals</p>
             </div>
-            <div class="gallery-item">
-              <div class="gallery-image">
-                <img src="https://placehold.co/600x400" alt="Cardio Area">
-              </div>
-              <div class="gallery-overlay">
-                <div class="gallery-text">
-                  <!-- <h3 class="gallery-title">Cardio Area</h3>
-                  <p class="gallery-description">Latest treadmills, ellipticals, and rowing machines</p> -->
+            <div class="trainers-grid">
+                <div class="trainer-card">
+                    <div class="trainer-img">
+                        <img src="/placeholder.svg?height=400&width=300" alt="John Doe">
+                    </div>
+                    <div class="trainer-info">
+                        <h3>John Doe</h3>
+                        <p class="trainer-role">Strength Coach</p>
+                        <p>Certified personal trainer with 8+ years of experience in strength and conditioning.</p>
+                        <div class="trainer-social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <div class="gallery-image">
-                <img src="https://placehold.co/600x400" alt="Yoga Studio">
-              </div>
-              <div class="gallery-overlay">
-                <div class="gallery-text">
-                  <!-- <h3 class="gallery-title">Yoga Studio</h3>
-                  <p class="gallery-description">Peaceful space for yoga and mindfulness practices</p> -->
+                <div class="trainer-card">
+                    <div class="trainer-img">
+                        <img src="/placeholder.svg?height=400&width=300" alt="Jane Smith">
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Jane Smith</h3>
+                        <p class="trainer-role">Cardio Specialist</p>
+                        <p>Fitness expert specializing in cardio, HIIT, and weight loss programs.</p>
+                        <div class="trainer-social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <div class="gallery-image">
-                <img src="https://placehold.co/600x400" alt="Group Fitness">
-              </div>
-              <div class="gallery-overlay">
-                <div class="gallery-text">
-                  <!-- <h3 class="gallery-title">Group Fitness</h3>
-                  <p class="gallery-description">Spacious rooms for high-energy group classes</p> -->
+                <div class="trainer-card">
+                    <div class="trainer-img">
+                        <img src="/placeholder.svg?height=400&width=300" alt="Mike Johnson">
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Mike Johnson</h3>
+                        <p class="trainer-role">Nutrition Coach</p>
+                        <p>Certified nutrition specialist helping clients achieve their fitness goals through proper nutrition.</p>
+                        <div class="trainer-social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="gallery-item">
-              <div class="gallery-image">
-                <img src="https://placehold.co/600x400" alt="Recovery Zone">
-              </div>
-              <div class="gallery-overlay">
-                <div class="gallery-text">
-                  <!-- <h3 class="gallery-title">Recovery Zone</h3>
-                  <p class="gallery-description">Dedicated area for stretching and recovery</p> -->
-                </div>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <div class="gallery-image">
-                <img src="https://placehold.co/600x400" alt="Locker Rooms">
-              </div>
-              <div class="gallery-overlay">
-                <div class="gallery-text">
-                  <!-- <h3 class="gallery-title">Locker Rooms</h3>
-                  <p class="gallery-description">Clean, modern locker rooms with showers and amenities</p> -->
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="text-center mt-8">
-            <a href="#contact" class="button outline-button button-lg">View More</a>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <section class="cta-section">
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
         <div class="container">
-          <div class="cta-grid">
-            <div class="cta-content">
-              <h2 class="cta-title">Ready to Start Your Fitness Journey?</h2>
-              <p class="cta-subtitle">Join us today and take the first step toward a healthier, stronger you.</p>
-              <ul class="cta-features">
-                <li class="cta-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon-check">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                  <span>Personalized fitness plans</span>
-                </li>
-                <li class="cta-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon-check">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                  <span>Expert trainers and coaches</span>
-                </li>
-                <li class="cta-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon-check">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                  <span>Supportive community</span>
-                </li>
-                <li class="cta-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon-check">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                  <span>Flexible scheduling options</span>
-                </li>
-                <li class="cta-feature">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon-check">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                  <span>30-day satisfaction guarantee</span>
-                </li>
-              </ul>
+            <div class="section-header">
+                <h2>Membership Plans</h2>
+                <p>Choose the perfect plan for your fitness journey</p>
             </div>
-            <!-- <div class="cta-card-container">
-              <div class="cta-card">
-                <h3 class="cta-card-title">Get Started Today</h3>
-                <p class="cta-card-text">Sign up for a free consultation with one of our expert trainers.</p>
-                <div class="cta-card-actions">
-                  <a href="#contact" class="button primary-button button-lg button-full">
-                    Schedule Consultation
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="icon-right">
-                      <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                  </a>
-                  <p class="cta-card-note">No credit card required. No obligation to join.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Basic</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">29</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Gym access (6AM-10PM)</li>
+                            <li><i class="fas fa-check"></i> Basic equipment usage</li>
+                            <li><i class="fas fa-check"></i> Locker room access</li>
+                            <li><i class="fas fa-check"></i> Fitness assessment</li>
+                            <li class="not-included"><i class="fas fa-times"></i> Personal training sessions</li>
+                            <li class="not-included"><i class="fas fa-times"></i> Group classes</li>
+                            <li class="not-included"><i class="fas fa-times"></i> Nutrition consultation</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#contact" class="btn btn-primary">Get Started</a>
+                    </div>
                 </div>
-              </div>
-            </div> -->
-          </div>
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Premium</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">59</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 24/7 gym access</li>
+                            <li><i class="fas fa-check"></i> Full equipment usage</li>
+                            <li><i class="fas fa-check"></i> Locker room access</li>
+                            <li><i class="fas fa-check"></i> Fitness assessment</li>
+                            <li><i class="fas fa-check"></i> 2 Personal training sessions/month</li>
+                            <li><i class="fas fa-check"></i> Unlimited group classes</li>
+                            <li class="not-included"><i class="fas fa-times"></i> Nutrition consultation</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#contact" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Elite</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">89</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 24/7 gym access</li>
+                            <li><i class="fas fa-check"></i> Full equipment usage</li>
+                            <li><i class="fas fa-check"></i> Locker room access</li>
+                            <li><i class="fas fa-check"></i> Fitness assessment</li>
+                            <li><i class="fas fa-check"></i> 4 Personal training sessions/month</li>
+                            <li><i class="fas fa-check"></i> Unlimited group classes</li>
+                            <li><i class="fas fa-check"></i> Nutrition consultation</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#contact" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section id="contact" class="contact-section">
+    <!-- Call to Action -->
+    <section class="cta">
         <div class="container">
-          <div class="section-header text-center">
-            <h2 class="section-title">Contact Us</h2>
-            <p class="section-subtitle">Have questions or ready to get started? Reach out to our team.</p>
-          </div>
-          <div class="contact-grid">
-            <div class="contact-form-container">
-              <form class="contact-form">
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="first-name" class="form-label">First Name</label>
-                    <input type="text" id="first-name" class="form-input" placeholder="John">
-                  </div>
-                  <div class="form-group">
-                    <label for="last-name" class="form-label">Last Name</label>
-                    <input type="text" id="last-name" class="form-input" placeholder="Doe">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="email" id="email" class="form-input" placeholder="john.doe@example.com">
-                </div>
-                <div class="form-group">
-                  <label for="phone" class="form-label">Phone</label>
-                  <input type="tel" id="phone" class="form-input" placeholder="(123) 456-7890">
-                </div>
-                <div class="form-group">
-                  <label for="message" class="form-label">Message</label>
-                  <textarea id="message" class="form-textarea"
-                    placeholder="Tell us about your fitness goals..."></textarea>
-                </div>
-                <button type="submit" class="button primary-button button-full">Send Message</button>
-              </form>
-            </div>
-            <div class="contact-info">
-              <div class="contact-info-section">
-                <h3 class="contact-info-title">Adresse</h3>
-                <i class='bx bx-map' style="font-size: 1.8rem;"></i>
-                <p class="contact-info-text">
-                  26 Rue Pinot<br>
-                  Residence Arc En Ciel<br>
-                  97354 Remire Montjoly
-                </p>
-              </div>
-              <div class="contact-info-section">
-                <h3 class="contact-info-title">Our social links</h3>
-                <div class="hours-grid">
-                  <div><a href="https://tiktok.com/@username" target="_blank" class="ri-tiktok-line"><i class='bx bxl-tiktok'></i></a></div>
-                  <div></div>
-                  <div> <a href="https://instagram.com/username" target="_blank" class="ri-instagram-line"><i class='bx bxl-instagram' ></i></a></div>
-                  <div></div>
-                  <div><a href="https://facebook.com/username" target="_blank" class="ri-facebook-line"><i class='bx bxl-facebook' ></i></a></div>
-                  <!-- <div>8:00 AM - 6:00 PM</div> -->
-                </div>
-              </div>
-              <div class="contact-info-section">
-                <h3 class="contact-info-title">Contact Information</h3>
-                <h5>You can contact us by clicking the icons below</h5>
-                <p class="contact-info-text">
-                  <a href="tel:+594694099388" class="ri-phone-line"><i class='bx bx-phone'></i></a>
-                  <a href="https://wa.me/+594694099388" target="_blank" class="ri-whatsapp-line"><i
-                      class='bx bxl-whatsapp'></i></a> 
-                       <a href="mailto:asso.bienetreseniors@gmail.com" class="ri-mail-line"><i class='bx bxl-gmail' ></i></a><br>
+            <h2>Ready to Start Your Fitness Journey?</h2>
+            <p>Join B-Strength today and take the first step towards a stronger, healthier you.</p>
+            <a href="#contact" class="btn btn-primary">Join Now</a>
+        </div>
+    </section>
 
-                </p>
-              </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team</p>
             </div>
-          </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>123 Fitness Street, Gym City, GC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>(123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@bstrength.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Hours</h3>
+                            <p>Monday - Friday: 5AM - 11PM</p>
+                            <p>Saturday - Sunday: 7AM - 9PM</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <select id="subject" required>
+                                <option value="" disabled selected>Select Subject</option>
+                                <option value="membership">Membership Inquiry</option>
+                                <option value="training">Personal Training</option>
+                                <option value="classes">Group Classes</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </section>
-    </main>
+    </section>
 
-    <footer class="site-footer">
-      <div class="container footer-container">
-        <div class="footer-logo">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-            <!-- <path d="M6.5 6.5h11"></path>
-            <path d="M6.5 17.5h11"></path>
-            <path d="M3 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
-            <path d="M3 19a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
-            <path d="M21 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
-            <path d="M21 19a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path> -->
-          </svg>
-          <!-- <span>FitPeak</span> -->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>B-<span>STRENGTH</span></h2>
+                    <p>Building strength, transforming lives.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#trainers">Trainers</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-programs">
+                    <h3>Programs</h3>
+                    <ul>
+                        <li><a href="#programs">Strength Training</a></li>
+                        <li><a href="#programs">Cardio Fitness</a></li>
+                        <li><a href="#programs">HIIT Classes</a></li>
+                        <li><a href="#programs">Yoga & Flexibility</a></li>
+                        <li><a href="#programs">Nutrition Coaching</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for fitness tips and updates.</p>
+                    <form id="newsletterForm">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-sm">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 B-Strength. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
         </div>
-        <nav class="footer-nav">
-          <a href="#" class="footer-link">Privacy Policy</a>
-          <a href="#" class="footer-link">Terms of Service</a>
-          <a href="#" class="footer-link">Careers</a>
-        </nav>
-        <div class="footer-copyright">
-          © <span id="current-year"></span> FitPeak. All rights reserved.
-        </div>
-      </div>
     </footer>
-  </div>
 
-  <div class="mobile-menu" id="mobile-menu">
-    <div class="mobile-menu-container">
-      <div class="mobile-menu-header">
-        <div class="mobile-menu-logo">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-            <!-- <path d="M6.5 6.5h11"></path>
-            <path d="M6.5 17.5h11"></path> -->
-            <!-- <path d="M3 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
-            <path d="M3 19a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
-            <path d="M21 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
-            <path d="M21 19a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path> -->
-          </svg>
-          <!-- <span>FitPeak</span> -->
-        </div>
-        <button class="mobile-menu-close" id="mobile-menu-close">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-      <nav class="mobile-menu-nav">
-        <a href="#" class="mobile-menu-link">Home</a>
-        <a href="#programs" class="mobile-menu-link">Programs</a>
-        <a href="#about" class="mobile-menu-link">About</a>
-        <a href="#gallery" class="mobile-menu-link">Gallery</a>
-        <a href="#contact" class="mobile-menu-link">Contact</a>
-      </nav>
-      <!-- <div class="mobile-menu-actions">
-        <a href="#contact" class="button primary-button button-full">Join Now</a>
-      </div> -->
-    </div>
-  </div>
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
-  <script src="./gym.js"></script>
+    <script src="./gym.js"></script>
 </body>
-
 </html>

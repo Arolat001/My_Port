@@ -308,8 +308,8 @@ nav ul li a:hover::after {
 }
 
 .image-container {
-  width: 350px;
-  height: 350px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid var(--accent-color);
